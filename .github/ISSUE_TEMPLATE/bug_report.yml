@@ -1,0 +1,40 @@
+name: "🐛 Bug report"
+description: "Report a reproducible issue. Never include secrets or real user data."
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include .env contents, Supabase tokens, private business plans, real user records, or database exports."
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Include the route/component/function involved.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+  - type: input
+    id: runtime
+    attributes:
+      label: Node/npm version
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized logs
+      description: Remove keys, tokens, emails and private user content.
