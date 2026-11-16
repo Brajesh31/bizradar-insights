@@ -1,0 +1,76 @@
+name: Repository quality checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  frontend:
+    name: Frontend install, lint and build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Build
+        run: npm run build
+  docs:
+    name: Documentation and asset checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate documentation links and files
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          import sys
+
+          required = [
+              "README.md", "SECURITY.md", "CONTRIBUTING.md",
+              "docs/README.md", "docs/architecture.md", "docs/database.md",
+              "docs/api.md", "docs/testing.md", "docs/accessibility.md",
+              "docs/security-review.md", "TECHNICAL_DEBT.md",
+              "docs/diagrams/architecture-context.mmd",
+              "docs/diagrams/product-journey.mmd",
+              "docs/diagrams/analysis-pipeline.mmd",
+              "docs/diagrams/auth-and-data.mmd",
+              "assets/diagrams/product-journey.svg",
+              "assets/diagrams/system-architecture.svg",
+              "assets/diagrams/analysis-pipeline.svg",
+          ]
+          errors = [f"Missing required file: {p}" for p in required if not Path(p).is_file()]
+          for path in Path(".").rglob("*.md"):
+              if any(part in {".git", "node_modules", "dist"} for part in path.parts):
+                  continue
+              text = path.read_text(encoding="utf-8")
+              if text.count("```") % 2:
+                  errors.append(f"Unclosed code fence: {path}")
+              for target in re.findall(r"!?[[^]]*]\(([^)]+)\)", text):
+                  target = target.strip().split("#", 1)[0]
+                  if not target or "://" in target or target.startswith(("mailto:", "#")):
+                      continue
+                  if not (path.parent / target).resolve().exists():
+                      errors.append(f"Broken local link: {path} -> {target}")
+          for svg in Path("assets").rglob("*.svg"):
+              content = svg.read_text(encoding="utf-8")
+              if "<svg" not in content or "</svg>" not in content:
+                  errors.append(f"Malformed SVG wrapper: {svg}")
+          if errors:
+              print("\n".join(errors))
+              sys.exit(1)
+          print("Documentation and SVG checks passed.")
+          PY
