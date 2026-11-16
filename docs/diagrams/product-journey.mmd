@@ -1,0 +1,12 @@
+flowchart TD
+ A([Open BizRadar]) --> B[Search location]
+ B --> C[Select category]
+ C --> D[Generate opportunities]
+ D --> E[Inspect scores, map and competition]
+ E --> F[Open feasibility report]
+ F --> G{Authenticated?}
+ G -->|No| H[Sign in or sign up]
+ H --> F
+ G -->|Yes| I[Save idea]
+ I --> J[Compare/revisit]
+ J --> K([Validate independently])
