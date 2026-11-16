@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private security reporting
+    url: https://github.com/brajesh31
+    about: Do not publish vulnerabilities, tokens or user records in public issues.
