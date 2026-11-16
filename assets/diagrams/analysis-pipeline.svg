@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
+<title id="title">BizRadar analysis pipeline</title><desc id="desc">Inputs are classified by provenance, scored, enriched and assembled into a report.</desc>
+<rect width="1200" height="380" rx="24" fill="#111827"/>
+<text x="48" y="55" fill="#f9fafb" font-family="Arial" font-size="28" font-weight="700">Analysis pipeline: source → score → report</text>
+<g font-family="Arial" text-anchor="middle">
+<rect x="40" y="135" width="165" height="115" rx="15" fill="#1e40af"/><text x="122" y="177" fill="#fff" font-size="17" font-weight="700">Inputs</text><text x="122" y="204" fill="#dbeafe" font-size="13">Location • category</text><text x="122" y="224" fill="#dbeafe" font-size="13">Idea and assumptions</text>
+<path d="M210 193h35m-9-8 9 8-9 8" stroke="#60a5fa" stroke-width="3" fill="none"/>
+<rect x="250" y="135" width="165" height="115" rx="15" fill="#155e75"/><text x="332" y="177" fill="#fff" font-size="17" font-weight="700">Provenance</text><text x="332" y="204" fill="#cffafe" font-size="13">Mock / provider</text><text x="332" y="224" fill="#cffafe" font-size="13">Rules / AI / user</text>
+<path d="M420 193h35m-9-8 9 8-9 8" stroke="#22d3ee" stroke-width="3" fill="none"/>
+<rect x="460" y="135" width="165" height="115" rx="15" fill="#065f46"/><text x="542" y="177" fill="#fff" font-size="17" font-weight="700">Scoring</text><text x="542" y="204" fill="#d1fae5" font-size="13">BizScore dimensions</text><text x="542" y="224" fill="#d1fae5" font-size="13">Category rules</text>
+<path d="M630 193h35m-9-8 9 8-9 8" stroke="#34d399" stroke-width="3" fill="none"/>
+<rect x="670" y="135" width="165" height="115" rx="15" fill="#713f12"/><text x="752" y="177" fill="#fff" font-size="17" font-weight="700">Enrichment</text><text x="752" y="204" fill="#fef3c7" font-size="13">Competition • risk</text><text x="752" y="224" fill="#fef3c7" font-size="13">Forecast • finance</text>
+<path d="M840 193h35m-9-8 9 8-9 8" stroke="#fbbf24" stroke-width="3" fill="none"/>
+<rect x="880" y="135" width="165" height="115" rx="15" fill="#581c87"/><text x="962" y="177" fill="#fff" font-size="17" font-weight="700">Report</text><text x="962" y="204" fill="#f3e8ff" font-size="13">Insights and caveats</text><text x="962" y="224" fill="#f3e8ff" font-size="13">Visualizations</text>
+<path d="M1050 193h35m-9-8 9 8-9 8" stroke="#c4b5fd" stroke-width="3" fill="none"/>
+<rect x="1090" y="135" width="80" height="115" rx="15" fill="#334155"/><text x="1130" y="183" fill="#fff" font-size="15" font-weight="700">Save</text><text x="1130" y="210" fill="#e2e8f0" font-size="12">User</text>
+</g>
+<text x="48" y="305" fill="#cbd5e1" font-family="Arial" font-size="14">Synthetic values, deterministic heuristics, provider results and AI output must remain distinguishable.</text>
+</svg>
