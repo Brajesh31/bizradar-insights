@@ -1,17 +1,23 @@
-# FAQ
+# ❓ FAQ
 
-## Is BizScore investment advice?
+**What is BizRadar?** A React/TypeScript app for business opportunity exploration and feasibility analysis.
 
-No. It is an informational prototype using rule-based and mock inputs in parts of the application.
+**Is all market data live?** No. The market generator uses synthetic values with random variation. Provider-backed paths must be evaluated separately.
 
-## Which backend is used?
+**Is BizScore validated?** It is heuristic scoring logic. No independent calibration/validation study is included.
 
-Supabase provides authentication, database capabilities, migrations, and Edge Functions.
+**Does the product use AI?** Selected Supabase Edge Functions call the Lovable AI Gateway. Some local summaries are template-based rather than LLM-generated.
 
-## What environment variables are required?
+**Does the app need Supabase?** Yes for current authentication, persistence and Edge Function paths.
 
-The Supabase URL and publishable browser key are required for auth-backed flows. Map configuration may be required for live maps.
+**Can I run without Mapbox?** Some functionality may still load, but map components may require provider configuration.
 
-## Where should I report a vulnerability?
+**Where should server secrets go?** Supabase Edge Function secrets, never Vite-prefixed variables.
 
-Use the private process in [SECURITY.md](../SECURITY.md), and rotate any exposed credential immediately.
+**Why must .env be untracked?** It is environment-specific and may contain credentials/configuration. Rotate any confidential values exposed in history.
+
+**Are automated tests present?** Current package scripts include lint/build but not a dedicated unit-test command.
+
+**Can I rely on profit forecasts?** No. They are illustrative estimates that need independent market, cost and legal validation.
+
+**How is deployment handled?** Build Vite, deploy dist with SPA rewrites, and separately configure Supabase schema/Auth/functions.
