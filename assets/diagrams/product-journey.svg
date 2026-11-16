@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+<title id="title">BizRadar product journey</title><desc id="desc">Six stages from location discovery to independent business validation.</desc>
+<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#14b8a6"/></linearGradient></defs>
+<rect width="1200" height="320" rx="24" fill="#0f172a"/>
+<text x="48" y="55" fill="#f8fafc" font-size="27" font-family="Arial" font-weight="700">From idea to an evidence-backed decision</text>
+<g font-family="Arial" text-anchor="middle">
+<g><rect x="45" y="112" width="160" height="118" rx="16" fill="#1e3a8a"/><text x="125" y="155" fill="#bfdbfe" font-size="17">01</text><text x="125" y="184" fill="#fff" font-size="17" font-weight="700">Discover</text><text x="125" y="207" fill="#dbeafe" font-size="12">Location</text></g>
+<path d="M207 171h25" stroke="url(#g)" stroke-width="4"/><path d="m225 163 9 8-9 8" fill="none" stroke="#14b8a6" stroke-width="3"/>
+<g><rect x="240" y="112" width="160" height="118" rx="16" fill="#164e63"/><text x="320" y="155" fill="#a5f3fc" font-size="17">02</text><text x="320" y="184" fill="#fff" font-size="17" font-weight="700">Categorize</text><text x="320" y="207" fill="#cffafe" font-size="12">Business type</text></g>
+<path d="M402 171h25" stroke="url(#g)" stroke-width="4"/><path d="m420 163 9 8-9 8" fill="none" stroke="#14b8a6" stroke-width="3"/>
+<g><rect x="435" y="112" width="160" height="118" rx="16" fill="#134e4a"/><text x="515" y="155" fill="#99f6e4" font-size="17">03</text><text x="515" y="184" fill="#fff" font-size="17" font-weight="700">Analyze</text><text x="515" y="207" fill="#ccfbf1" font-size="12">Scores and signals</text></g>
+<path d="M597 171h25" stroke="url(#g)" stroke-width="4"/><path d="m615 163 9 8-9 8" fill="none" stroke="#14b8a6" stroke-width="3"/>
+<g><rect x="630" y="112" width="160" height="118" rx="16" fill="#365314"/><text x="710" y="155" fill="#d9f99d" font-size="17">04</text><text x="710" y="184" fill="#fff" font-size="17" font-weight="700">Evaluate</text><text x="710" y="207" fill="#ecfccb" font-size="12">Feasibility</text></g>
+<path d="M792 171h25" stroke="url(#g)" stroke-width="4"/><path d="m810 163 9 8-9 8" fill="none" stroke="#14b8a6" stroke-width="3"/>
+<g><rect x="825" y="112" width="160" height="118" rx="16" fill="#713f12"/><text x="905" y="155" fill="#fde68a" font-size="17">05</text><text x="905" y="184" fill="#fff" font-size="17" font-weight="700">Compare</text><text x="905" y="207" fill="#fef3c7" font-size="12">Candidate ideas</text></g>
+<path d="M987 171h25" stroke="url(#g)" stroke-width="4"/><path d="m1005 163 9 8-9 8" fill="none" stroke="#14b8a6" stroke-width="3"/>
+<g><rect x="1020" y="112" width="145" height="118" rx="16" fill="#581c87"/><text x="1092" y="155" fill="#e9d5ff" font-size="17">06</text><text x="1092" y="184" fill="#fff" font-size="17" font-weight="700">Validate</text><text x="1092" y="207" fill="#f3e8ff" font-size="12">Field research</text></g>
+</g>
+<text x="48" y="278" fill="#cbd5e1" font-size="14" font-family="Arial">Scores are decision-support estimates. Independently verify sources, assumptions, costs and regulations.</text>
+</svg>
