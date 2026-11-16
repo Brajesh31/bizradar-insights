@@ -1,0 +1,13 @@
+flowchart TB
+ B([Browser user]) --> SPA[React + Vite SPA]
+ SPA --> ROUTES[React Router pages]
+ ROUTES --> UI[Components and UI primitives]
+ UI --> LIB[Local analytics engines]
+ UI --> SERVICES[Client services]
+ SERVICES --> MAP[Geocoding and map provider]
+ SERVICES --> SB[Supabase client]
+ SB --> AUTH[Supabase Auth]
+ SB --> DB[(Postgres with RLS)]
+ SB --> EDGE[Supabase Edge Functions]
+ EDGE --> LLM[Lovable AI Gateway]
+ EDGE --> DB
