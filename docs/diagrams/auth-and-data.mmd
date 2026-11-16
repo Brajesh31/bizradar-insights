@@ -1,0 +1,19 @@
+sequenceDiagram
+ participant User
+ participant App as React App
+ participant Context as AuthContext
+ participant Auth as Supabase Auth
+ participant DB as Supabase Postgres
+ User->>App: Open application
+ App->>Context: Mount provider
+ Context->>Auth: Subscribe + getSession
+ Auth-->>Context: Session or null
+ Context-->>App: user/loading/session state
+ User->>App: Save an idea
+ App->>DB: Insert owner-scoped row
+ DB->>DB: Evaluate RLS
+ alt Allowed
+ DB-->>App: Insert success
+ else Denied
+ DB-->>App: Permission error
+ end
