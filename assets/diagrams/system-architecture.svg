@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="540" viewBox="0 0 1200 540" role="img" aria-labelledby="title desc">
+<title id="title">BizRadar system architecture</title><desc id="desc">React frontend connects to local engines, Supabase services and external providers.</desc>
+<rect width="1200" height="540" rx="24" fill="#0b1220"/>
+<text x="48" y="54" fill="#fff" font-family="Arial" font-size="28" font-weight="700">System architecture and trust boundaries</text>
+<g font-family="Arial">
+<rect x="50" y="115" width="300" height="330" rx="18" fill="#172554" stroke="#60a5fa" stroke-width="2"/>
+<text x="75" y="151" fill="#bfdbfe" font-size="20" font-weight="700">Browser application</text>
+<rect x="80" y="180" width="240" height="55" rx="10" fill="#1d4ed8"/><text x="200" y="214" fill="#fff" font-size="18" text-anchor="middle">React + Vite SPA</text>
+<rect x="80" y="254" width="240" height="55" rx="10" fill="#1e40af"/><text x="200" y="287" fill="#fff" font-size="16" text-anchor="middle">Pages and components</text>
+<rect x="80" y="328" width="240" height="75" rx="10" fill="#1e3a8a"/><text x="200" y="357" fill="#fff" font-size="16" text-anchor="middle">Scoring • reports</text><text x="200" y="380" fill="#dbeafe" font-size="14" text-anchor="middle">charts • maps • services</text>
+<rect x="455" y="115" width="300" height="330" rx="18" fill="#064e3b" stroke="#34d399" stroke-width="2"/>
+<text x="480" y="151" fill="#a7f3d0" font-size="20" font-weight="700">Supabase platform</text>
+<rect x="485" y="180" width="240" height="55" rx="10" fill="#047857"/><text x="605" y="214" fill="#fff" font-size="18" text-anchor="middle">Authentication</text>
+<rect x="485" y="254" width="240" height="55" rx="10" fill="#065f46"/><text x="605" y="287" fill="#fff" font-size="18" text-anchor="middle">Postgres + RLS</text>
+<rect x="485" y="328" width="240" height="75" rx="10" fill="#064e3b"/><text x="605" y="357" fill="#fff" font-size="16" text-anchor="middle">Edge Functions</text><text x="605" y="380" fill="#d1fae5" font-size="14" text-anchor="middle">server-side secrets</text>
+<rect x="860" y="115" width="290" height="330" rx="18" fill="#4c1d95" stroke="#c4b5fd" stroke-width="2"/>
+<text x="885" y="151" fill="#ddd6fe" font-size="20" font-weight="700">External providers</text>
+<rect x="890" y="180" width="230" height="55" rx="10" fill="#6d28d9"/><text x="1005" y="214" fill="#fff" font-size="17" text-anchor="middle">AI Gateway</text>
+<rect x="890" y="254" width="230" height="55" rx="10" fill="#5b21b6"/><text x="1005" y="287" fill="#fff" font-size="17" text-anchor="middle">Geocoding</text>
+<rect x="890" y="328" width="230" height="55" rx="10" fill="#4c1d95"/><text x="1005" y="361" fill="#fff" font-size="17" text-anchor="middle">Map provider</text>
+</g>
+<g stroke="#94a3b8" stroke-width="3" fill="none">
+<path d="M350 285H455"/><path d="m443 277 12 8-12 8"/>
+<path d="M755 365H860"/><path d="m848 357 12 8-12 8"/>
+<path d="M755 207H860" stroke-dasharray="8 7"/><path d="m848 199 12 8-12 8"/>
+</g>
+<text x="50" y="492" fill="#cbd5e1" font-family="Arial" font-size="14">Browser keys are public configuration only. AI/provider secrets remain server-side in Edge Function configuration.</text>
+</svg>
