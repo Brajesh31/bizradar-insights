@@ -1,7 +1,19 @@
-# Support
+# 🆘 Support
 
-BizRadar Insights is maintained on a best-effort basis.
+This repository is maintained as a software project, not as a business advisory or financial service.
 
-Read [docs/installation.md](docs/installation.md), [docs/troubleshooting.md](docs/troubleshooting.md), and [docs/faq.md](docs/faq.md) first. Include browser, Node.js version, route, sanitized console output, and relevant Supabase error code.
+## Before asking for help
+1. Read README and the relevant guide in docs/.
+2. Check the troubleshooting guide and open issues.
+3. Reproduce with synthetic inputs and a development Supabase project.
+4. Record browser/OS, Node/npm version, commit SHA, steps and sanitized output.
+5. Identify whether the issue is frontend, Supabase, provider, AI gateway or data-quality related.
 
-Never attach `.env`, user data, tokens, or database exports. Report vulnerabilities through [SECURITY.md](SECURITY.md).
+## Never share
+- Supabase service-role keys or database passwords.
+- Session/access/refresh tokens.
+- Provider/AI gateway secrets.
+- User database exports or conversation history.
+- Personal contact information or private business plans.
+
+For security vulnerabilities, use the private reporting instructions in SECURITY.md.
