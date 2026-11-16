@@ -1,0 +1,12 @@
+flowchart TD
+ INPUT[Location + category + idea] --> DATA[Market data service]
+ DATA --> KIND{Provenance type}
+ KIND -->|Synthetic/mock| MOCK[Template and generated values]
+ KIND -->|External| PROVIDER[Configured provider results]
+ MOCK --> SCORE[BizScore and category scoring]
+ PROVIDER --> SCORE
+ SCORE --> COMP[Competition and location analysis]
+ COMP --> FORECAST[Forecast, risk and finance]
+ FORECAST --> REPORT[Feasibility report builder]
+ REPORT --> UI[Charts, cards and recommendations]
+ UI --> SAVE[Optional Supabase persistence]
